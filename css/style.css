@@ -1,0 +1,174 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f6f6f6;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+li {
+    margin: 0 15px;
+}
+
+/* Навигационная панель */
+/* Навигационная панель */
+/* Общие стили для навигационной панели */
+.navbar {
+    background-color: #141414; /* Тёмный фон */
+    color: white; /* Белый текст */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px; /* Отступы между кнопками */
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px; /* Добавим немного внутреннего отступа */
+    border-radius: 8px; /* Скругление углов */
+    transition: background-color 0.3s ease; /* Плавный переход */
+}
+
+.navbar a:hover {
+    background-color: #f2f2f2; /* Светлый фон при наведении */
+    color: white; /* Цвет текста остаётся белым */
+}
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Контейнер */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-box {
+    background-color: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    background: #eee;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.tab.active {
+    background-color: #fff;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn-login {
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.or-divider {
+    margin: 20px 0;
+    font-size: 12px;
+    color: gray;
+}
+
+.social-buttons button {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-google {
+    background-color: white;
+}
+
+.btn-facebook {
+    background-color: white;
+}
+.social-buttons button {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Отступ между иконкой и текстом */
+}
+
+.social-buttons i {
+    font-size: 18px;
+}

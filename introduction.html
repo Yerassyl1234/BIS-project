@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Platform - React Course</title>
+  <link rel="stylesheet" href="css/introductionstyles.css">
+</head>
+<body>
+  <header>
+    <div><strong>Learning Platform</strong></div>
+    <nav>
+      <a href="content.html">Courses</a>
+      <a href="profile.html">Profile</a>
+      <a href="index.html">Login</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="course-header">
+      <h1>Introduction to React</h1>
+      <div class="course-info">
+        <div class="course-description">
+          <p class="course-subtitle">Web Development - Beginner</p>
+          <p>Learn the basics of React, including components, state, and props. This course will give you a solid foundation in modern web development using React.</p>
+          <div class="rating">
+            <i class="fas fa-star"></i> 4.5
+          </div>
+        </div>
+        <div class="course-progress"> <h1>Course Progress</h1>
+          <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+          </div>
+          <p class="progress-text" id="progress-text">0% complete</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" data-target="modules">Modules</button>
+        <button class="tab" data-target="materials">Materials</button>
+        <button class="tab" data-target="quizzes">Quizzes</button>
+      </div>
+  
+      <div class="tab-content active" id="modules">
+        <div class="module-grid">
+          <div class="module">
+            <h3>React Basics</h3>
+            <button class="btn" onclick="markComplete(0)">Mark as Complete</button>
+          </div>
+          <div class="module">
+            <h3>Components and Props</h3>
+            <button class="btn" onclick="markComplete(1)">Mark as Complete</button>
+          </div>
+          <div class="module">
+            <h3>State and Lifecycle</h3>
+            <button class="btn" onclick="markComplete(2)">Mark as Complete</button>
+          </div>
+        </div>
+      </div>
+
+  <div class="tab-content" id="materials" style="display: none;">
+    <div class="material">
+      <h3>Course Slides</h3>
+      <p>PDF</p>
+      <button class="btn download-btn">Download</button>
+    </div>
+    <div class="material">
+      <h3>Example Code</h3>
+      <p>ZIP</p>
+      <button class="btn download-btn">Download</button>
+    </div>
+  </div>
+
+  <div class="tab-content" id="quizzes" style="display: none;">
+      <div class="quiz-container">
+        <h2>Course Quiz</h2>
+        <p>This is a placeholder for the course quiz. In a real application, this would contain actual quiz questions and an interface for answering them.</p>
+        <button class="btn start-quiz-btn">Start Quiz</button>
+      </div>
+    </div>
+
+  <script>
+  const tabs = document.querySelectorAll('.tab');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tabContents.forEach(content => content.style.display = 'none');
+
+    const target = tab.dataset.target;
+    document.getElementById(target).style.display = 'block';
+    tab.classList.add('active');
+  });
+});
+
+
+const progress = document.getElementById("progress");
+let completedModules = 0;
+const totalModules = 3;
+
+
+function markComplete(moduleId) {
+  const buttons = document.querySelectorAll('.module .btn');
+  const button = buttons[moduleId];
+
+  if (document.getElementById('modules').style.display !== 'none' && !button.classList.contains('completed')) { // Проверка видимости
+    button.classList.add('completed');
+    button.textContent = "Completed";
+    completedModules++;
+    updateProgress();
+  }
+}
+
+
+function updateProgress() {
+  const progressPercent = (completedModules / totalModules) * 100;
+  progress.style.width = progressPercent + "%";
+  document.getElementById("progress-text").textContent = `${progressPercent.toFixed(0)}% complete`;
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Profile</title>
+<link rel="stylesheet" href="css/profile.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  <!-- Add Font Awesome -->
+</head>
+<body>
+<div class="container">
+    <header class="navbar">
+        <div class="logo">Learning Platform</div>
+        <nav>
+            <ul>
+                <li><a href="content.html">Courses</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="index.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+  <main>
+    <h1>User Profile</h1>
+    <div class="tabs">
+      <button class="tab active" onclick="openTab(event, 'Profile')">Profile</button>
+      <button class="tab" onclick="openTab(event, 'Subscription')">Subscription</button>
+      <button class="tab" onclick="openTab(event, 'SocialMedia')">Social Media</button>
+      <button class="tab" onclick="openTab(event, 'Notifications')">Notifications</button>
+    </div>
+    <div id="Profile" class="tab-content active">
+        <form class="profile-form">
+          <h2>Profile Information</h2>
+          <p>Update your profile details here.</p>
+          <div class="profile-info">
+            <div class="profile-picture">
+              <img src="placeholder.jpg" alt="Profile Picture" />
+            </div>
+            <div class="profile-details">
+              <div class="form-group file-upload">
+                <input type="file" id="profilePic" accept="image/*">
+              </div>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" value="John Doe">
+              </div>
+              <div class="form-group">
+                <label for="bio">Bio</label>
+                <textarea id="bio">I am a student passionate about learning.</textarea>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="save-btn">Save Changes</button>
+        </form>
+      </div>
+      
+    <div id="Subscription" class="tab-content">
+        <p>Manage your subscription and billing information.</p>
+
+                    <div class="form-group">
+                        <label for="plan">Current Plan</label>
+                        <select id="plan">
+                            <option value="basic">Basic</option>
+                            <option value="pro">Pro</option>
+                            <option value="enterprise">Enterprise</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="billing-info">Billing Information</label>
+                        <input type="text" id="billing-info" placeholder="Enter your billing information">
+                    </div>
+                    <button type="button" class="save-btn">Update Payment Method</button>
+                    <button type="button" class="cancel-btn">Cancel Subscription</button>
+                </form>
+    </div>
+    <div id="SocialMedia" class="tab-content">
+      <h2>Social Media Accounts</h2>
+      <p>Link your social media accounts to share your progress.</p>
+      <ul class="social-list">
+        <li>
+          <i class="fab fa-facebook-f"></i> <!-- Facebook icon --> Facebook
+          <button class="connect-btn">Connect</button>
+        </li>
+        <li>
+          <i class="fab fa-twitter"></i> <!-- Twitter icon --> Twitter
+          <button class="connect-btn">Connect</button>
+        </li>
+        <li>
+          <i class="fab fa-instagram"></i> <!-- Instagram icon --> Instagram
+          <button class="connect-btn">Connect</button>
+        </li>
+      </ul>
+    </div>
+    <div id="Notifications" class="tab-content">
+        <h2>Notification Preferences</h2>
+        <p>Manage how you receive updates about courses and platform activities.</p>
+        <ul class="notification-list">
+          <li>
+            <i class="fas fa-bell"></i> Email Notifications
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider round"></span>
+            </label>
+          </li>
+          <li>
+            <i class="fas fa-bell"></i> SMS Notifications
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </li>
+          <li>
+            <i class="fas fa-bell"></i> App Notifications
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider round"></span>
+            </label>
+          </li>
+        </ul>
+      </div>
+      
+  </main>
+</div>
+    <script>
+        function openTab(event, tabName) {
+            var tabContent = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = 'none';
+            }
+            var tabs = document.getElementsByClassName('tab');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            document.getElementById(tabName).style.display = 'block';
+            event.currentTarget.classList.add('active');
+        }
+        document.getElementById('Profile').style.display = 'block';
+    </script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .navbar {
+    background-color: #141414; /* Тёмный фон */
+    color: white; /* Белый текст */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px; /* Отступы между кнопками */
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px; /* Добавим немного внутреннего отступа */
+    border-radius: 8px; /* Скругление углов */
+    transition: background-color 0.3s ease; /* Плавный переход */
+}
+
+.navbar a:hover {
+    background-color: #f2f2f2; /* Светлый фон при наведении */
+    color: white; /* Цвет текста остаётся белым */
+}
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+  main h1 {
+    margin: 20px 0;
+  }
+  
+  .tabs {
+    display: flex;
+    border-bottom: 2px solid #eee;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+  }
+  
+  .tab.active {
+    border-bottom: 3px solid #333;
+  }
+  
+  .tab-content {
+    display: none;
+    padding: 20px 0;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  .subscription-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .save-btn,
+  .connect-btn,
+  .cancel-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cancel-btn {
+    background-color: #e74c3c;
+  }
+  
+  .social-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-list li {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .social-list li i { /* Style Font Awesome icons */
+    margin-right: 10px; /* Adjust spacing as needed */
+    font-size: 1.2em;  /* Adjust icon size as needed */
+  }
+  
+  .social-list li button {
+    margin-left: auto; /* Push button to the right */
+  }
+
+  /* ... your existing CSS ... */
+
+.notification-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .notification-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .notification-list li i {
+    margin-right: 10px;
+    font-size: 1em;
+  }
+  
+  /* Toggle Switch Style */
+ /* ... your existing CSS ... */
+
+/* Toggle Switch Style */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px; /* Reduced width */
+    height: 24px; /* Reduced height */
+    margin-left: auto; /* Push to the right */
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333; /* Black background */
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 12px; /* Smaller radius */
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; /* Reduced size */
+    width: 18px; /* Reduced size */
+    left: 2px; /* Adjusted position */
+    bottom: 3px; /* Adjusted position */
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: black; /* Keep the blue for 'on' */
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px white;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 12px; /* Smaller radius */
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .notification-list li {
+      justify-content: space-between; /* Distributes space between icon/text and switch */
+      padding: 8px 0; /* Reduced padding */
+  }
+/* ... your existing CSS ... */
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+  }
+  
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ddd; /* Gray background for the circle */
+    margin-right: 20px; /* Added margin to separate the picture from the button*/
+  }
+  
+  .profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .file-upload {
+    display: flex; /* Align file input and label horizontally*/
+    align-items: center;
+  }
+  
+  .file-upload-label {
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /*Space between picture and button*/
+  }
+  
+  
+  .profile-details {
+    flex-grow: 1;
+    margin-top: 0;
+  }
+  
+  .profile-details .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* ... rest of your CSS ... */
+  

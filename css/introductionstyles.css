@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  header {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  header a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .course-header {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+ /* ... (предыдущий CSS код) ... */
+ /* ... (предыдущий CSS код) ... */
+
+.course-info {
+    display: flex;
+    justify-content: space-between; /* Располагаем блоки по краям */
+    gap: 20px; /* Зазор между блоками */
+    margin-bottom: 20px;
+  }
+  
+  
+  .course-description,
+  .course-progress {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    flex: 1; /*  Каждая часть занимает равное пространство */
+  }
+  
+  .course-description h2 {
+      margin-top: 0; /* Убираем верхний отступ у заголовка */
+      font-size: 1.4em; /* Увеличиваем размер заголовка */
+      font-weight: bold;
+  }
+  
+  .course-description p {
+      margin-top: 0.5em; /* Отступ между абзацами */
+      line-height: 1.5; /* Межстрочный интервал */
+      font-size: 1em; /* Размер шрифта текста */
+  }
+  
+  .course-description .course-subtitle {
+      color: #777; /* Серый цвет для подзаголовка */
+      font-weight: normal; /* Обычный вес подзаголовка */
+      margin-bottom: 0.5em;
+  }
+  
+  .course-description .rating {
+    margin-top: 1em;
+    color: gold;
+  }
+  
+  .course-progress {
+    text-align: right; /* Выравнивание текста вправо */
+  }
+  
+  .course-progress .progress-text {
+    margin-top: 10px;
+  }
+  
+  .course-progress .progress-bar {
+      margin-top: 10px; /* Отступ для прогресс-бара */
+      height: 10px;
+      background-color: #eee;
+      border-radius: 5px;
+      overflow: hidden;
+  }
+  
+  .course-progress .progress {
+      height: 100%;
+      background-color: #007bff;
+      width: 0%;
+      transition: width 0.3s ease;
+      border-radius: 5px;
+  }
+  
+  
+  /* ... (остальной CSS код) ... */
+  
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: none; /* Убираем нижнюю границу */
+    background-color: transparent; /* Прозрачный фон */
+    border-radius: 0; /* Убираем скругленные углы */
+    overflow: visible; /* Делаем overflow видимым */
+    box-shadow: none; /* Убираем тень */
+  }
+  
+  .tab {
+    flex: 0 0 auto; /* Задаем фиксированную ширину */
+    width: 20px; /* Ширина каждой вкладки */
+    text-align: center;
+    padding: 8px 10px; /* Уменьшаем padding */
+    border: 1px solid #ddd; /* Добавляем границу */
+    border-radius: 4px; /* Скругленные углы */
+    margin-right: 5px; /* Зазор между вкладками */
+    background-color: #f5f5f5; /* Светло-серый фон */
+    color: #555; /* Серый цвет текста */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Анимация перехода */
+  }
+  
+  .tab.active {
+    background-color: #fff; /* Белый фон для активной вкладки */
+    color: #333; /* Темный текст для активной вкладки */
+    border-color: #000; /* Темная граница для активной вкладки */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для активной вкладки */
+  }
+  
+  /* ... (остальной CSS код) ... */
+  
+  
+  h1 {
+    font-size: 1.8rem;
+    margin: 0 0 10px;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+  
+  .star {
+    font-size: 1.2rem;
+    color: gold;
+  }
+  
+  .progress-container {
+    margin-top: 10px;
+  }
+  
+  .progress-bar {
+    background-color: #e0e0e0;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #000;
+    width: 0;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+  }
+  
+  .progress-text {
+    margin-top: 5px;
+    font-size: 0.9rem;
+  }
+  
+  
+  .course-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* две колонки равной ширины */
+    gap: 20px;
+  }
+  
+  
+  .tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    font-weight: bold;
+  }
+  
+  .tab.active {
+    border-bottom-color: #333;
+  }
+  
+  .tab-content {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .module-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* одна колонка */
+    grid-gap: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .module {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .module-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn.completed {
+    background-color: green;
+  }
+  .material {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee; /* тонкая серая граница */
+  }
+  
+  .material h3 {
+      margin-top: 0;
+      font-weight: bold;
+  }
+  
+  .material p {
+      font-size: 0.9em;
+      color: #777;
+      margin-bottom: 10px;
+  }
+  
+  .download-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+/* ... (прежний CSS) ... */
+
+.quiz-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+  }
+  
+  .quiz-container h2 {
+      margin-top: 0;
+      font-weight: bold;
+  }
+  
+  .quiz-container p {
+    margin-top: 1em;
+    line-height: 1.5;
+  }
+  
+  .start-quiz-btn {
+    background-color: black; /* Синий цвет кнопки */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1em;
+  }
+    
